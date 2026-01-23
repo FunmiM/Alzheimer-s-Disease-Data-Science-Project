@@ -34,5 +34,3 @@ Mean Brightness: 74.044948
 Texture/Contrast: The augmented images appear to maintain the same statistical properties as the original scans.
 
 Conclusion: The dataset is of high quality and is ready to be pre-processed for Machine Learning model training.
-
-**Would you like me to show you the code to split your folders into "Train" and "Test" sets?****
