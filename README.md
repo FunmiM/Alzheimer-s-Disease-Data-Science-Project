@@ -5,7 +5,7 @@ The dataset consists of MRI scan images categorized into four different classes:
 
 ### 1. Class Distribution Analysis
 
-The dataset contains four stages of Alzheimer’s Disease. Upon analysis, I found that the classes are **[Balanced / Unbalanced]**.
+The dataset contains four stages of Alzheimer’s Disease. Upon analysis, I found that the classes are Unbalanced.
 
 Total Images: 44,000
 Largest Class: NonDemented with 12800 images
@@ -24,17 +24,15 @@ Using pixel intensity histograms, I observed a consistent distribution across al
 
 Background: A high frequency of "0" (black) pixels represents the non-brain area.
 Brain Tissue: Most tissue pixels fall between the [Value] and [Value] range.
-Finding: There are no significant brightness biases between "Non-Demented" and "Demented" classes, meaning the AI won't "cheat" by looking at lighting.
+Finding: There are no significant brightness biases between "Non-Demented" and "Demented" classes.
 
 ### 4. Feature Engineering & Augmentation
 
 I calculated the average Texture (Graininess) and Contrast for the dataset.
 
-Mean Brightness: [Average Value from your stats_df]
+Mean Brightness: 74.044948
 Texture/Contrast: The augmented images appear to maintain the same statistical properties as the original scans.
 
-> Conclusion: The dataset is of high quality and is ready to be pre-processed for Machine Learning model training.
-
-2. **The Pop Quiz Pile (Testing):** Photos the AI has never seen before, used to prove it actually learned something.
+Conclusion: The dataset is of high quality and is ready to be pre-processed for Machine Learning model training.
 
 **Would you like me to show you the code to split your folders into "Train" and "Test" sets?****
