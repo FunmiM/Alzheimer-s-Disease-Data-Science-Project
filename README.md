@@ -25,32 +25,7 @@ Moderate Demented: 10.0K samples.
 
 ### 1. Dimensional Trends
 
-Analysis shows a distinct correlation between the clinical stage and the average image dimensions. As the severity of dementia increases, the images generally become wider and shorter.
-
-| Stage | Avg. Height | Avg. Width |
-| --- | --- | --- | --- |
-| **Non-Demented** | ~192.0 
-
- | ~189.0 
-
- |
-| **Very Mild Demented** | ~191.6 
-
- | ~191.0 
-
- |
-| **Mild Demented** | ~190.7 
-
- | ~196.0 
-
- |
-| **Moderate Demented** | ~190.1 
-
- | ~199.5 
-
- |
-
-### 2. Visual Intensity Metrics
+Analysis shows a distinct correlation between the clinical stage and the average image dimensions. As the severity of dementia increases, the images generally become wider and shorter.StageAvg. HeightAvg. WidthNon-Demented~192.0 ~189.0 Very Mild Demented~191.6 ~191.0 Mild Demented~190.7 ~196.0 Moderate Demented~190.1 ~199.5 2. Visual Intensity Metrics
 
 The following table summarizes the average brightness and intensity levels across the different classes:
 
