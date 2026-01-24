@@ -12,28 +12,26 @@ Moderate Demented: Advanced stage.
 To ensure the model learns effectively, I first mapped out our data "population." The dataset is remarkably robust, leaning slightly toward healthy controls to provide a strong baseline for "normal" brain structure.
 
 **Non-Demented:** 12.6K images 
+
 **Very Mild Demented:** 11.2K images 
+
 **Mild Demented:** 10.0K images 
+
 **Moderate Demented:** 10.0K images 
 
 ### 2. Visual "Heatmap" & Intensity Analysis
 
 By applying conditional formatting to pixel data, a fascinating trend emerges: **as dementia severity increases, the overall brightness of the images decreases.** This visual "dimming" could be a digital proxy for changes in brain tissue density.
 
-| Stage | Avg. Brightness | Observation |
-| --- | --- | --- |
-| **Non-Demented** | <br>**78.99** 
+Stage - Avg. Brightness
 
- | The brightest images in the set. |
-| **Very Mild** | <br>**74.35** 
+**Non-Demented** - 78.99
 
- | A noticeable drop in luminance. |
-| **Moderate** | <br>**72.49** 
+**Very Mild** - 74.35
 
- | Continued decline in brightness. |
-| **Mild** | <br>**71.32** 
+**Moderate** - 72.49
 
- | The lowest brightness levels detected. |
+**Mild** - 71.32
 
 Note: Interestingly, the Standard Intensity (78.97) and Average Intensity (74.59) remain identical across all categories, suggesting that the "range" of light stays the same, even if the "total" light dims. 
 
