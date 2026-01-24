@@ -28,6 +28,7 @@ Moderate Demented: 10.0K samples.
 Analysis shows a distinct correlation between the clinical stage and the average image dimensions. As the severity of dementia increases, the images generally become wider and shorter.
 
 | Stage | Avg. Height | Avg. Width |
+| --- | --- | --- | --- |
 | **Non-Demented** | ~192.0 
 
  | ~189.0 
