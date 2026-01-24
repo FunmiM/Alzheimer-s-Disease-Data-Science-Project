@@ -1,90 +1,53 @@
 ## Alzheimer's Disease Data Project
 
-### 1. Class Distribution Dashboard
+The dataset consists of MRI scan images categorized into four different classes:
 
-The dataset exhibits a balanced distribution with a slight majority in the healthy control group. This distribution is critical for understanding model bias during training. 
+Non-Demented: No signs of Alzheimer’s.
+Very Mild Demented: Early-stage signs of Alzheimer’s.
+Mild Demented: More pronounced symptoms.
+Moderate Demented: Advanced stage.
 
-* 
-**NonDemented:** 12.6K images 
+### 1. Class Distribution
 
+To ensure the model learns effectively, I first mapped out our data "population." The dataset is remarkably robust, leaning slightly toward healthy controls to provide a strong baseline for "normal" brain structure.
 
-* 
-**VeryMildDemented:** 11.2K images 
+**Non-Demented:** 12.6K images 
+**Very Mild Demented:** 11.2K images 
+**Mild Demented:** 10.0K images 
+**Moderate Demented:** 10.0K images 
 
+### 2. Visual "Heatmap" & Intensity Analysis
 
-* 
-**MildDemented:** 10.0K images 
+By applying conditional formatting to pixel data, a fascinating trend emerges: **as dementia severity increases, the overall brightness of the images decreases.** This visual "dimming" could be a digital proxy for changes in brain tissue density.
 
+| Stage | Avg. Brightness | Observation |
+| --- | --- | --- |
+| **Non-Demented** | <br>**78.99** 
 
-* 
-**ModerateDemented:** 10.0K images 
+ | The brightest images in the set. |
+| **Very Mild** | <br>**74.35** 
 
+ | A noticeable drop in luminance. |
+| **Moderate** | <br>**72.49** 
 
+ | Continued decline in brightness. |
+| **Mild** | <br>**71.32** 
 
-### 2. Heatmap Analysis (Pixel Intensity Trends)
+ | The lowest brightness levels detected. |
 
-The following intensity metrics show how visual data varies across dementia stages. Notably, brightness decreases as the severity of the condition progresses from Non-Demented to Mild Demented. 
+Note: Interestingly, the Standard Intensity (78.97) and Average Intensity (74.59) remain identical across all categories, suggesting that the "range" of light stays the same, even if the "total" light dims. 
 
-| Stage | Avg. Brightness | Avg. Std. Intensity | Avg. Intensity |
-| --- | --- | --- | --- |
-| **NonDemented** | <br>**78.99** 
+### 3. Authenticity Check (Augmented vs. Original)
 
- | 78.97 
+To keep the analysis grounded in reality, I tracked the ratio of real-world scans to computer-generated (augmented) images.
 
- | 74.59 
+**Original Photos:** 91.78% (40.38K) 
+**Augmented Photos:** 8.22% (3.62K) 
+**The Takeaway:** The project prioritizes high-fidelity, original medical data, using augmentation only as a light "seasoning" to help the model generalize better. 
 
- |
-| **VeryMild Demented** | 74.35 
+### 4. Interactive Drill-Down: Shape & Size
 
- | 78.97 
+Using interactive filtering, I discovered a "Dimensional Drift." There is a physical shift in the images as the disease reaches the "Moderate" stage.
 
- | 74.59 
-
- |
-| **ModerateDemented** | 72.49 
-
- | 78.97 
-
- | 74.59 
-
- |
-| **MildDemented** | <br>**71.32** 
-
- | 78.97 
-
- | 74.59 
-
- |
-
-
-### 3. Comparative Analysis (Augmentation vs. Original)
-
-A comparison was conducted to measure the data balance between raw captured images and those generated through augmentation techniques. 
-
-* 
-**Original Photos:** 40.38K images, accounting for **91.78%** of the dataset. 
-
-
-* 
-**Augmented Photos:** 3.62K images, accounting for **8.22%** of the dataset. 
-
-
-* 
-**Insight:** The dataset relies heavily on original data, using augmentation as a minor supplement to enhance model generalization. 
-
-
-
-### 4. Interactive Filtering (Dimensional Analysis)
-
-Users can filter the dataset by "Stage" to observe significant changes in image metadata. A drill-down into image dimensions reveals a physical trend. 
-
-* 
-**Dimensional Drift:** There is a clear inverse relationship between dementia severity and image dimensions. 
-
-
-* 
-**ModerateDemented Images:** Tend to be shorter (Avg. Height ~190.1) but significantly wider (Avg. Width ~199.5). 
-
-
-* 
-**NonDemented Images:** Tend to be taller (Avg. Height ~192.0) but narrower (Avg. Width ~189.0). 
+**Healthy Scans:** Tend to be taller (192.0) and narrower (189.0). 
+**Moderate Demented Scans:** Shift significantly, becoming shorter (190.1) and wider (199.5). 
